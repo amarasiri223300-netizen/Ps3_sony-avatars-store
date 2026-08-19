@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://comfy-unicorn-cee75e.netlify.app/sitemap.xml
