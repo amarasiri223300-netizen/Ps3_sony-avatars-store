@@ -20,18 +20,18 @@ nav{display:flex;gap:22px}nav a{color:#aeb8c9;text-decoration:none}nav a:hover{c
 .container{max-width:1150px;margin:auto;padding:20px 22px 60px}
 .toolbar{display:flex;justify-content:space-between;align-items:center;margin:25px 0;gap:15px;flex-wrap:wrap}
 .toolbar h2{font-size:28px}.search{background:#111722;border:1px solid #2a3447;color:#fff;padding:13px 16px;border-radius:12px;min-width:260px;outline:none}
-.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.card{background:#101620;border:1px solid #222d3e;border-radius:18px;overflow:hidden;transition:.25s;box-shadow:0 10px 30px #0003}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;align-items:stretch}
+.card{background:#101620;border:1px solid #222d3e;border-radius:18px;overflow:hidden;transition:.25s;box-shadow:0 10px 30px #0003;display:flex;flex-direction:column;height:100%}
 .card:hover{transform:translateY(-5px);border-color:#1688ff88}
-.avatar{height:190px;display:grid;place-items:center;background:linear-gradient(135deg,#172238,#0d121d);overflow:hidden}.avatar img{width:112px;height:112px;object-fit:cover;border-radius:14px;display:block}
+.avatar{height:170px;display:grid;place-items:center;flex:none;background:linear-gradient(135deg,#172238,#0d121d);overflow:hidden}.avatar img{width:112px;height:112px;object-fit:cover;border-radius:14px;display:block}
 .card:nth-child(2) .avatar{background:linear-gradient(135deg,#301f48,#111827)}
 .card:nth-child(3) .avatar{background:linear-gradient(135deg,#143b37,#101820)}
 .card:nth-child(4) .avatar{background:linear-gradient(135deg,#49331c,#141820)}
-.info{padding:16px}.info h3{font-size:17px;margin-bottom:8px}.price{color:#52b4ff;font-weight:900;font-size:19px}.buy{width:100%;margin-top:13px;padding:11px;border:0;border-radius:10px;background:#1a2637;color:#fff;cursor:pointer}.buy:hover{background:#1688ff}
+.info{padding:16px;display:flex;flex-direction:column;flex:1}.info h3{font-size:17px;margin-bottom:8px}.price{color:#52b4ff;font-weight:900;font-size:19px}.buy{width:100%;margin-top:auto;padding:11px;border:0;border-radius:10px;background:#1a2637;color:#fff;cursor:pointer}.buy:hover{background:#1688ff}
 .empty{display:none;text-align:center;color:#98a4b8;padding:35px}
 footer{text-align:center;border-top:1px solid #202738;padding:28px;color:#6f7b8f}
-@media(max-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}.hero h1{font-size:38px}}
-@media(max-width:650px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.hero h1{font-size:38px}}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){nav{display:none}.grid{grid-template-columns:1fr}.hero{margin:20px 12px}.container{padding:10px 14px}.search{width:100%}}
 
 .games-section{margin:10px 0 35px;padding:25px;background:#0d131e;border:1px solid #222d3e;border-radius:20px}
@@ -406,6 +406,7 @@ footer{text-align:center;border-top:1px solid #202738;padding:28px;color:#6f7b8f
 <div class="price">1.49 ريال</div>
 <button class="buy" onclick="addCart('Casino 4 Avatar')">إضافة للسلة</button>
 </div>
+</article>
 <article class="card" data-name="Casino 5 Avatar">
 <div class="avatar"><img alt="Casino 5 Avatar" src="casino_avatars/casino_5.jpg"/></div>
 <div class="info">
